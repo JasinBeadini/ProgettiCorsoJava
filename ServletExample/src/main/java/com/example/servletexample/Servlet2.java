@@ -10,13 +10,19 @@ import jakarta.servlet.annotation.*;
 @WebServlet(name = "helloServlet2", value = "/hello-servlet2")
 public class Servlet2 extends HttpServlet {
 
+    private String message;
+
+    public void init() {
+        message = "Prova!";
+    }
+
     private static final long serialVersionUID=1L;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String jspPage="prova.jsp";
+        String ciao="prova.jsp";
         String nome="Jasin";
         request.setAttribute("name", nome);
-        RequestDispatcher view = request.getRequestDispatcher(jspPage);
+        RequestDispatcher view = request.getRequestDispatcher(nome);
         view.forward(request, response);
     }
 
