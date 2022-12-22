@@ -35,11 +35,9 @@ public class Servlet2 extends HttpServlet {
         String password = request.getParameter("password");
 
 
-        if (username=="Jasin") {
-            request.getSession().setAttribute("loggedInUser", username);
-            response.sendRedirect("index.jsp");
+        if (username.equals("Jasin")) {
+            response.sendRedirect("navbar.jsp");
         } else {
-            request.setAttribute("errorMessage", "Invalid username or password");
             request.getRequestDispatcher("prova.jsp").forward(request, response);
         }
     }
