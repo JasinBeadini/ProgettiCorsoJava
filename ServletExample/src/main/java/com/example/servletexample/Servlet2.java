@@ -1,11 +1,13 @@
 package com.example.servletexample;
 
 import java.io.*;
+import java.util.Formatter;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+
 
 @WebServlet(name = "helloServlet2", value = "/hello-servlet2")
 public class Servlet2 extends HttpServlet {
@@ -20,18 +22,26 @@ public class Servlet2 extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String page="prova.jsp";
-        String nome="Jasin";
-        request.setAttribute("name", nome);
+        String provanome="Jasin";
+        request.setAttribute("name", provanome);
         RequestDispatcher view = request.getRequestDispatcher(page);
         view.forward(request, response);
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String page="url.jsp";
-        String nome2= request.getParameter("nome");
-        request.setAttribute("nome", nome2);
-        RequestDispatcher view = request.getRequestDispatcher(page);
-        view.forward(request, response);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+
+        if (username=="Jasin") {
+            request.getSession().setAttribute("loggedInUser", username);
+            response.sendRedirect("index.jsp");
+        } else {
+            request.setAttribute("errorMessage", "Invalid username or password");
+            request.getRequestDispatcher("prova.jsp").forward(request, response);
+        }
     }
 
 
