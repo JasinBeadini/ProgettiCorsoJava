@@ -22,7 +22,7 @@ public class Servlet2 extends HttpServlet {
         String ciao="prova.jsp";
         String nome="Jasin";
         request.setAttribute("name", nome);
-        RequestDispatcher view = request.getRequestDispatcher(nome);
+        RequestDispatcher view = request.getRequestDispatcher(ciao);
         view.forward(request, response);
     }
 

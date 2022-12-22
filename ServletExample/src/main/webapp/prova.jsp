@@ -1,4 +1,4 @@
-<jsp:useBean id="nome" scope="request" type=""/>
+
 <%--
   Created by IntelliJ IDEA.
   User: jasin
