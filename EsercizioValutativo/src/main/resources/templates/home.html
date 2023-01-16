@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(to right, #00b4db, #0083b0);
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            display: block;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.1);}
+            100% {transform: scale(1);}
+        }
+
+        h1, h2, h3 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            font-size: 4em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="person.png" class="img-fluid rounded-circle mb-3" alt="Profile Picture">
+            <h1 class="display-4">Il tuo nome</h1>
+            <p class="lead">Introduci te stesso</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2 class="my-4">Skills</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Categoria 1</h3>
+            <p>Lista di skill nella prima categoria</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Categoria 2</h3>
+            <p>Lista di skill nella seconda categoria</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Categoria 3</h3>
+            <p>Lista di skill nella terza categoria</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h2 class="my-4">Progetti</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Progetto 1</h4>
+                <p class="card-text">Breve descrizione del primo progetto</p>
+                <a href="https://github.com/yourusername/project1" class="btn btn-primary">Vedi il progetto</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Progetto 2</h4>
+                <p class="card-text">Breve descrizione del secondo progetto</p>
+                <a href="https://github.com/yourusername/project2" class="btn btn-primary">Vedi il progetto</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Progetto 3</h4>
+                <p class="card-text">Breve descrizione del terzo progetto</p>
+                <a href="https://github.com/yourusername/project3" class="btn btn-primary">Vedi il progetto</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
